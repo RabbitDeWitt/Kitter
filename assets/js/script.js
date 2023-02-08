@@ -4,6 +4,7 @@ const navToggler = document.querySelector('.nav-toggle-btn');
 const navbar = document.querySelector('.navbar');
 const navbarLinks = document.querySelectorAll('.navbar-link');
 const header= document.querySelector('.header');
+const backTopBtn = document.querySelector('.back-top-btn');
 
 
 
@@ -33,10 +34,12 @@ const closeNavbar = function(){
 addEventOnElem(navbarLinks, 'click', toggleNavbar);
 
 const activeElemOnScroll = function(){
-  if(window.scrollY > 30){
+  if(window.scrollY > 100){
     header.classList.add('active');
+    backTopBtn.classList.add('active');
   }else{
     header.classList.remove('active');
+    backTopBtn.classList.remove('active');
   }
 }
 
